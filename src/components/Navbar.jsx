@@ -1,10 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { Images } from "../Constantes";
-import Home from "../screnns/Home";
-import Cours from "../screnns/Cours";
-import Tuteurs from "../screnns/Tuteurs";
-import Blogs from "../screnns/Blogs";
 
 const Navbar = ({ showModal }) => {
   const [toggle, setToggle] = useState(false);
@@ -18,22 +14,22 @@ const Navbar = ({ showModal }) => {
         <div className="hidden md:flex items-center ">
           <ul className="flex gap-4">
             <li>
-              <Link to="/Home" className="hover:text-[#00296b]">
+              <Link to="/" className="hover:text-[#00296b]">
                 Accueil
               </Link>
             </li>
             <li>
-              <Link to="/Cours" className="hover:text-[#00296b]">
+              <Link to="/cours" className="hover:text-[#00296b]">
                 Cours
               </Link>
             </li>
             <li>
-              <Link to="/Tuteurs" className="hover:text-[#00296b]">
+              <Link to="/cuteurs" className="hover:text-[#00296b]">
                 Tuteurs
               </Link>
             </li>
             <li>
-              <Link to="/Projets" className="hover:text-[#00296b]">
+              <Link to="/projets" className="hover:text-[#00296b]">
                 Projets
               </Link>
             </li>

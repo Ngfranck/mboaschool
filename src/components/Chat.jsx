@@ -46,7 +46,7 @@ function Chat() {
           <div className="space-y-4">
             {messages.map((message) => (
               <div key={message.id} className={`flex ${message.sender === 'user' ? 'justify-end' : 'justify-start'}`}>
-                <div className={`max-w-xs rounded-lg ${message.sender === 'user' ? 'bg-indigo-500 text-white' : 'bg-white text-gray-900'} px-4 py-2 text-sm shadow`}>
+                <div className={`max-w-xs rounded-lg ${message.sender === 'user' ? 'bg-[#00296b] text-white' : 'bg-white text-gray-900'} px-4 py-2 text-sm shadow`}>
                   {message.content}
                 </div>
               </div>
@@ -56,8 +56,8 @@ function Chat() {
       </div>
       <div className="bg-white border-t border-gray-200 px-4 py-6 sm:px-6">
       <div className="flex space-x-3">
-  <input type="text" placeholder="Tapez votre message..." value={newMessage} onChange={handleNewMessageChange} className="flex-grow border-gray-300 focus:ring-indigo-500 focus:border-indigo-500 block w-full rounded-md sm:text-sm border-gray-300" />
-  <button onClick={handleSendMessage} className="inline-flex items-center px-4 py-2 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-500 hover:bg-indigo-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+  <input type="text" placeholder="Tapez votre message..." value={newMessage} onChange={handleNewMessageChange} className="flex-grow border-gray-300 focus:ring-indigo-500 focus:border-indigo-500 block w-full rounded-md sm:text-sm border-gray-300 outline-none" />
+  <button onClick={handleSendMessage} className="inline-flex items-center px-4 py-2 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-[#00296b] hover:bg-indigo-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
     Envoyer
   </button>
   <button onClick={handleShareDocument} className="inline-flex items-center px-4 py-2 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-green-500 hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500">
