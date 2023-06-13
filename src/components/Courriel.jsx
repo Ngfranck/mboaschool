@@ -34,7 +34,7 @@ export default function Courriel({ onClose }) {
       <div className="bg-white rounded  w-full md:w-1/2 lg:w-1/3 bg-white rounded-lg shadow-lg p-6 ">
         <div className="w-full h-[8vh] grid justify-items-end">
           <button
-            className="grid flex items-center justify-center mx-50 rounded-full  text-[#00296b] w-9 h-9"
+            className="grid flex items-center justify-center mx-50 rounded-full  text-[#00296b] font-bold w-9 h-9"
             onClick={onClose}
           >
             X

@@ -99,6 +99,12 @@ const Navbar = ({ onClick}) => {
             >
               Connexion
             </button>
+            <button
+            onClick={onClick}
+            className="flex justify-between items-center  bg-transparent  px-6 gap-2"
+          >
+          <img src={Images.profil1} className="h-[40px] rounded-full" />
+          </button>
           </div>
         </ul>
       </div>

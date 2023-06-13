@@ -35,10 +35,10 @@ export default function Modal({ onClose }) {
 
   return (
     <div className="fixed top-0 w-screen flex items-center justify-center h-screen bg-gray-900/30 backdrop-blur ">
-      <div className="bg-white rounded h-[60vh] w-1/3 ">
+      <div className="bg-white rounded  w-full md:w-1/2 lg:w-1/3 bg-white rounded-lg shadow-lg p-6">
         <div className="w-full h-[8vh] grid justify-items-end">
           <button
-            className="grid flex items-center justify-center mx-50 rounded-full  text-[#00296b] w-9 h-9"
+            className="grid flex items-center justify-center mx-50 rounded-full  text-[#00296b] font-bold w-9 h-9"
             onClick={onClose}
           >
             X
@@ -47,13 +47,13 @@ export default function Modal({ onClose }) {
         <form className="max-w-lg mx-auto  rounded px-8 pt-6 pb-8 mb-4 sm:grid sm:grid-cols-2 sm:gap-6">
           <div className="mb-4 sm:col-span-2">
             <label
-              className="block text-gray-700 grid justify-items-start font-bold mb-2"
+              className="block mb-2 font-medium text-gray-700"
               htmlFor="username"
             >
               E-mail
             </label>
             <input
-              className={`shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline ${
+              className={`w-full px-3 py-2 border border-gray-400 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-600 ${
                 errors.username ? "border-red-500" : ""
               }`}
               id="username"
@@ -68,13 +68,13 @@ export default function Modal({ onClose }) {
           </div>
           <div className="mb-6 sm:col-span-2">
             <label
-              className="block text-gray-700 grid justify-items-start font-bold mb-2"
+              className="block mb-2 font-medium text-gray-700"
               htmlFor="password..."
             >
               Password
             </label>
             <input
-              className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              className="w-full px-3 py-2 border border-gray-400 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-600"
               id="password"
               type="password"
               placeholder="Password"
