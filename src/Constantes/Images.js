@@ -12,6 +12,8 @@
  const landry  = require("../assets/images/landry.jpg");
  const yal = require("../assets/images/yal.jpg");
  const franck  = require("../assets/images/franck.jpg");
+ const profil1  = require("../assets/images/profil1.jpg");
+ const profil2  = require("../assets/images/profil2.jpg");
 
 
 
@@ -30,4 +32,6 @@
   yal,
   franck,
   landry,
+  profil1,
+  profil2,
  }

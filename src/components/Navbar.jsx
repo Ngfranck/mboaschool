@@ -1,15 +1,17 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { Images } from "../Constantes";
+import { Images, } from "../Constantes";
+import {hamburgerMenu, close, settings} from '../assets'
 
-const Navbar = ({ showModal }) => {
+
+const Navbar = ({ onClick}) => {
   const [toggle, setToggle] = useState(false);
   const handleClick = () => setToggle(!toggle);
 
   return (
     <div className="w-full h-[80px] bg-white border-b">
       <div className="md:max-w-[1480px] max-w-[600px] m-auto w-full h-full flex justify-between items-center md:px-8 px-8">
-        <img src={Images.logo} className="h-[25px]" />
+        <img src={Images.logo} className="h-[50px]" />
 
         <div className="hidden md:flex items-center ">
           <ul className="flex gap-4">
@@ -24,7 +26,7 @@ const Navbar = ({ showModal }) => {
               </Link>
             </li>
             <li>
-              <Link to="/cuteurs" className="hover:text-[#00296b]">
+              <Link to="/tuteurs" className="hover:text-[#00296b]">
                 Tuteurs
               </Link>
             </li>
@@ -42,19 +44,25 @@ const Navbar = ({ showModal }) => {
         </div>
 
         <div className="hidden md:flex">
-          <button className="flex justify-between items-center  bg-transparent  px-6 gap-2">
+          <button onClick={onClick} className="flex justify-between items-center  bg-transparent  px-6 gap-2">
             Inscription
           </button>
           <button
-            onClick={showModal}
+            onClick={onClick}
             className="px-8 py-3 rounded-md bg-[#00296b] text-white font-bold"
           >
             Connexion
           </button>
+          <button
+            onClick={onClick}
+            className="flex justify-between items-center  bg-transparent  px-6 gap-2"
+          >
+          <img src={Images.profil1} className="h-[40px] rounded-full" />
+          </button>
         </div>
 
         <div className="md:hidden" onClick={handleClick}>
-          <img src={toggle ? Images.close : Images.hamburgerMenu} />
+          <img src={toggle?close:hamburgerMenu} />
         </div>
       </div>
 
@@ -82,11 +90,11 @@ const Navbar = ({ showModal }) => {
             <Link to="/Blogs">Blogs</Link>
           </li>
           <div className="flex flex-col my-4 gap-4">
-            <button className="border border-[20B486] flex justify-center items-center  bg-transparent  px-6 gap-2 py-4">
-              inscription
-            </button>
+          <button onClick={onClick} className="hover:text-[#00296b]">
+                Inscription
+              </button>
             <button
-              onClick={showModal}
+              onClick={onClick}
               className="border-none px-8 py-5 rounded-md bg-[#00296b] text-white font-bold"
             >
               Connexion

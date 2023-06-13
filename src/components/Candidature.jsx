@@ -19,7 +19,7 @@ const Candidature = () => {
           </p>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-      <button className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded">
+      <button to='../screnns/Formulairtuteur' className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded">
       Démander un Tuteur
       </button>
       <button className="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded">
